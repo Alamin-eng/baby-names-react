@@ -6,7 +6,7 @@ import NamesList from "./namesList";
 import Search from "./search";
 import Favourites from "./favouriteName";
 import Footer from "./footer";
-import BabyName from "./babyName";
+
 
 
 function App() {
