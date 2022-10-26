@@ -15,8 +15,8 @@ const Search = ({ searchInput, setSearchInput }) => {
           className="search-input"
           placeholder="Search for a name"
           value={searchInput}
-          onChange={setSearchInput}
-        />
+          onChange={setSearchInput} 
+        /> 
       </form>
     </div>
   );

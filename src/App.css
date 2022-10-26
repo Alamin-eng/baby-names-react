@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: 'Comfortaa',
   cursive;
+  background-color: rgb(250, 240, 217);
 }
 .container {
   margin-top: 2%;
@@ -12,9 +13,14 @@ body {
 }
 
 .header-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   padding: 2.5%;
   text-align: center;
-  font-size: 3em;
+  font-size: 3.5em;
   font-stretch: extra-expanded;
   font-weight: bolder;
   color: rgb(87, 4, 164);
@@ -23,7 +29,54 @@ body {
   border-bottom: 10px double rgb(87, 4, 164,.25);
   margin-bottom: 4%;
 }
+.fav{
+  font-size: 1.2em;
+}
+/* boy girl icon */
+.icon-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+}
+.boy-icon{
+  color: rgb(0, 112, 204);
+  background-color: #61dafb;
+  border: 2px solid rgb(45, 144, 209);
+}
+.girl-icon {
+  color: rgb(235, 14, 150);
+  background-color: #e9bbe7;
+  border: 2px solid rgb(240, 158, 172);
+}
+.boygirl-icon{
+  padding: 3px;
+  font-size: .55em;
+  border-left: 2px solid rgb(240, 158, 172);
+  border-top: 2px solid rgb(240, 158, 172);
+  border-right: 2px solid rgb(45, 144, 209);
+  border-bottom: 2px solid rgb(45, 144, 209);
+  background: linear-gradient(90deg, rgba(18, 193, 200, 1) 0%, rgba(255, 180, 233, 1) 61%);
+}
+.boy {
+  color: rgb(0, 112, 204);
+  background-color: #61dafb;
+  font-weight: bold;
+  padding: 5px;
+}
 
+.girl {
+  color: rgb(235, 14, 150);
+  background-color: #e9bbe7;
+  font-weight: bold;
+  padding: 5px;
+}
+.gender{
+  font-size: 1rem;
+  font-family: 'Comfortaa',
+      cursive;
+  border-style: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -37,18 +90,7 @@ body {
   padding: 1% 3%;
   border-radius: 15px;
 }
-.boy {
-  color: rgb(0, 112, 204);
-  background-color: #61dafb;
-  font-weight: bold;
-  padding: 5px;
-}
-.girl {
-  color: rgb(235, 14, 150);
-  background-color: #e9bbe7;
-  font-weight: bold;
-  padding: 5px;
-}
+
 .girl:hover{
   background-color: rgb(205, 0, 113);
   color:white
@@ -59,43 +101,47 @@ body {
 }
 .search-input {
   display: block;
-  margin-left: 1rem;
-  width: 45vw;
-  border-radius: 6px;
+  margin-left:0;
+  width: 100%;
+  border-radius: 2rem;
   background-color: rgb(254, 225, 152);
   outline: none;
   border: none;
   height: 2rem;
   color: black;
-  padding: 1.2rem;
+  padding: 1.5rem;
   font-weight: bold;
+}
+.search-input:hover{
+  background-color: rgb(221, 195, 246);
+  transition: .55s ease-in;
+}
+.footer {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .75em;
+}
+.fontawe{
+  font-size: 1.6em;
+}
+.footer-icon {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.5rem;
 }
 @media (prefers-reduced-motion: no-preference) {
   body{
+    font-size: 95%;
+  }
+  h1,h3, form, .footer{
     font-size: 88%;
   }
+    .boy, .girl{
+      font-size: 87%;
+    }
 }
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 2em;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-} */
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

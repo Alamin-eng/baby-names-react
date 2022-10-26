@@ -1,20 +1,19 @@
 import React from "react";
 import BabyName from "./babyName";
 
-const Favourites = ({ babyNames, favouritesNames, setFavouritesNames }) => {
+const Favourites = ({ babyNames, favouriteNames, setFavouriteNames }) => {
   const favouriteBabyNames = babyNames.filter((babyName) =>
-    favouritesNames.includes(babyName.id)
+    favouriteNames.includes(babyName.id)
   );
 
   const removeFromFavourites = (id) => {
-    setFavouritesNames(favouritesNames.filter((item) => item !== id));
+    setFavouriteNames(favouriteNames.filter((item) => item !== id));
   };
-
   const hasName = favouriteBabyNames.length > 0;
 
   return (
     <div>
-      <h3 className="text-success">
+      <h3 className="text-success fav">
         {hasName
           ? "Favourites:"
           : "Favourites: Click on some names below to add to your favourite list...."}

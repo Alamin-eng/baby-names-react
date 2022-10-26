@@ -4,8 +4,9 @@ import BabyName from "./babyName";
 function NamesList({
   babyNames,
   searchInput,
-  favouritesNames,
-  setFavouritesNames,
+  gender,
+  favouriteNames,
+  setFavouriteNames,
 }) {
   let sortNamesAndFilter = babyNames
     .sort((a, b) => {
@@ -19,15 +20,22 @@ function NamesList({
       }
     })
     .filter((e) => e.name.toLowerCase().includes(searchInput.toLowerCase()))
-    .filter((e) => !favouritesNames.includes(e.id));
-
+    .filter((e) => !favouriteNames.includes(e.id))
+    .filter((e) => {
+      if(gender === ''){
+        return true // notice how we passed true for empty string (related to gender)
+      } else {
+        return e.sex === gender
+      }
+    } )
+     
   const addToFavourites = (id) => {
-    setFavouritesNames([...favouritesNames, id]);
+    setFavouriteNames([...favouriteNames, id]);
   };
-
+ 
   return (
     <div>
-      <BabyName cash={sortNamesAndFilter} onbtnClick={addToFavourites} />
+      <BabyName cash={sortNamesAndFilter} onbtnClick={addToFavourites}/>
     </div>
   );
 }

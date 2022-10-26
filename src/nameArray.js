@@ -854,5 +854,50 @@ const names = [
     name: "Ozella",
     sex: "f",
   },
+  {
+    id: 187,
+    name: "Ismail",
+    sex: "m",
+  },
+  {
+    id: 188,
+    name: "Fatima",
+    sex: "f",
+  },
+  {
+    id: 189,
+    name: "Yunus",
+    sex: "m",
+  },
+  {
+    id: 190,
+    name: "Sultana",
+    sex: "f",
+  },
+  {
+    id: 191,
+    name: "Rahul",
+    sex: "m",
+  },
+  {
+    id: 192,
+    name: "Kevin",
+    sex: "m",
+  },
+  {
+    id: 193,
+    name: "Selina",
+    sex: "f",
+  },
+  {
+    id: 194,
+    name: "Sofie",
+    sex: "f",
+  },
+  {
+    id: 195,
+    name: "Arun",
+    sex: "m",
+  }
 ];
 export default names;
